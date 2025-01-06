@@ -1,0 +1,300 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #cf1aa2, #6194f3);
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+nav ul li a {
+  color: #c9d1d9;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ee8ff7;
+  transform: scale(1.1);
+}
+/* Tema oscuro */
+.dark {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+/* Tema claro */
+.light {
+  background-color: #ffffff;
+  color: #0d1117;
+}
+
+.light header {
+  background-color: #f5f5f5;
+}
+
+.light a {
+  color: #dee3e7;
+}
+/* Cards en modo claro */
+.light .card {
+  background-color: #f9f9f9; /* Color de fondo claro */
+  border: 1px solid #ddd; /* Borde sutil */
+  color: #0d1117; /* Texto oscuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Sección de contacto en modo claro */
+.light .contact {
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #ccc; /* Borde sutil */
+  color: #0d1117; /* Texto oscuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.light .contact input,
+.light .contact textarea {
+  background-color: #f5f5f5; /* Fondo más claro para inputs */
+  border: 1px solid #ddd; /* Bordes claros */
+  color: #0d1117; /* Texto oscuro */
+}
+
+.light .contact button {
+  background-color: #cf1aa2; /* Botón con un color llamativo */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.light .cert-button:hover {
+  background-color: #e44ecf; /* Color más intenso al pasar el mouse */
+}
+/* Estilos para las tarjetas en modo claro */
+.light .certifications-container > div {
+  background-color: #f9f9f9; /* Fondo claro */
+  border: 1px solid #eba2db; /* Borde ligero */
+  color: #0d1117; /* Texto oscuro */
+  padding: 20px;
+  border-radius: 8px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.light .projects-container > div {
+  background-color: #f9f9f9; /* Fondo claro */
+  border: 1px solid #eba2db; /* Borde ligero */
+  color: #0d1117; /* Texto oscuro */
+  padding: 20px;
+  border-radius: 8px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sección completa de contacto en modo claro */
+.light #contact {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #0d1117; /* Texto oscuro */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Información de contacto */
+.light .contact-info {
+  padding: 10px;
+  background-color: #f9f9f9; /* Fondo claro */
+  border: 1px solid #ddd; /* Borde claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto resaltado en la información de contacto */
+.light .contact-info span {
+  font-weight: bold; /* Resaltar etiquetas como "Email" y "Teléfono" */
+  color: #f17cd4; /* Color llamativo */
+}
+
+/* Formulario */
+.light .form-container {
+  background-color: #f9f9f9; /* Fondo claro */
+  border: 1px solid #ddd; /* Borde claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs y textarea */
+.light .form-container input,
+.light .form-container textarea {
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Bordes claros */
+  color: #0d1117; /* Texto oscuro */
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Botón de envío */
+.light .send-button {
+  background-color: #cf1aa2; /* Botón llamativo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.light .send-button:hover {
+  background-color: #e44ecf; /* Color más intenso al pasar el mouse */
+}
+
+/* Encabezado del formulario (h2) */
+.light .form-container h2 {
+  color: #f17cd4; /* Texto oscuro */
+  font-size: 2rem; /* Tamaño ligeramente mayor */
+  font-weight: bold; /* Resalta el texto */
+}
+
+/* Etiquetas de los campos del formulario */
+.light .form-container label {
+  color: #f17cd4; /* Texto oscuro */
+  font-size: 1rem;
+  font-weight: 600; /* Semi-negrita para mayor claridad */
+  margin-bottom: 5px;
+  display: block; /* Asegura que esté separado del input */
+}
+
+/* Texto de los inputs y textarea */
+.light .form-container input,
+.light .form-container textarea {
+  color: #f17cd4;  /* Texto oscuro */
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Bordes claros */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+
+
+/* Estilo para la sección "Sobre mí" en modo light */
+.light #about {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 40px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px; /* Ancho máximo */
+}
+
+/* Título "Sobre mí" */
+.light #about h2 {
+  color: #e980f3; /* Color llamativo */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Texto dentro del rectángulo */
+.light #about p {
+  background-color: #f9f9f9; /* Fondo claro */
+  color: #0d1117; /* Texto oscuro */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  margin: 0 auto;
+  max-width: 700px; /* Ancho máximo del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+/* Footer en modo light */
+.light footer {
+  background-color: #f9f9f9; /* Fondo claro */
+  color: #0d1117; /* Texto oscuro */
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd; /* Línea superior sutil */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera superior */
+}
+
+/* Enlaces dentro del footer */
+.light footer a {
+  color: #cf1aa2; /* Color llamativo para enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.light footer a:hover {
+  color: #e44ecf; /* Color más intenso al pasar el mouse */
+}
+/* Footer en modo dark */
+.dark footer {
+  background-color: #0d1117; /* Fondo oscuro */
+  color: #c9d1d9; /* Texto claro */
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #30363d; /* Línea superior tenue */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave superior */
+}
+
+/* Enlaces dentro del footer */
+.dark footer a {
+  color: #58a6ff; /* Azul brillante para enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dark footer a:hover {
+  color: #79c0ff; /* Color más claro al pasar el mouse */
+}
+.dark #about {
+  background-color: #0d1117; /* Fondo blanco */
+  padding: 40px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px; /* Ancho máximo */
+}
+.dark #about h2 {
+  color: #e980f3; /* Color llamativo */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
