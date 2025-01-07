@@ -297,4 +297,38 @@ nav ul li a:hover {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1rem; /* Ajusta el subtítulo */
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    flex-direction: column; /* Cambia la dirección del menú a columna */
+    gap: 10px; /* Espacio entre elementos */
+  }
+
+  nav ul li {
+    margin: 0; /* Ajusta el margen */
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 1rem; /* Ajusta el tamaño de los enlaces */
+  }
+
+  button {
+    margin-top: 10px; /* Ajusta el margen del botón */
+    font-size: 1.2rem; /* Ajusta el tamaño del ícono */
+  }
+}
 
