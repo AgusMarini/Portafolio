@@ -67,4 +67,18 @@
     background-color: #8f1feb;
     transform: scale(1.1); /* Enlarges slightly */
   }
-  
+  /* Tema claro */
+.light .project-card {
+  background-color: #f3e6f2; /* Fondo claro */
+  color: #333333;
+}
+
+.light .project-button {
+  background-color: #f179c3;
+  color: #ffffff;
+}
+
+.light .project-button:hover {
+  background-color: #8f1feb;
+  color: #161b22;
+}

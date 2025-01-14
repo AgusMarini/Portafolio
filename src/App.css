@@ -1,4 +1,4 @@
-/* Estilo global */
+/* Global */
 html {
   scroll-behavior: smooth;
 }
@@ -10,7 +10,23 @@ body {
   background-color: #0d1117;
   color: #c9d1d9;
 }
-
+#about p{
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #e872f3; /* Color y grosor del borde */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px auto; /* Espaciado externo centrado */
+  background-color: #0d1117; /* Fondo del contenedor */
+  max-width: 665px; /* Ancho máximo del contenedor */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+#about h2{
+  text-align: center;
+  font-size: 2rem;
+  color: #e872f3;
+  margin-bottom: 20px;
+}
 /* Header */
 header {
   text-align: center;
@@ -18,10 +34,16 @@ header {
   background: linear-gradient(135deg, #cf1aa2, #6194f3);
   color: white;
   position: relative;
-  overflow: hidden;
 }
 
-/* Centrado del contenido principal del header */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Contenido principal del header */
 .header-content {
   display: flex;
   flex-direction: column;
@@ -31,64 +53,56 @@ header {
 
 .header-content h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
-  color: #f5a3f5; /* Color sólido atractivo */
+  color: #f5a3f5;
 }
 
 .header-content p {
   margin: 5px 0;
   font-size: 1.2rem;
   text-align: center;
-  color: #e1d9ff; /* Color más tenue */
+  color: #e1d9ff;
 }
 
-/* Contenedor del menú */
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrar horizontalmente */
-  margin-top: 20px; /* Espaciado adicional debajo del texto */
-}
-
-.nav-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrar horizontalmente */
-  justify-content: center;
-  margin-top: 10px;
-}
-
-/* Botón hamburguesa */
+/* Botón Hamburguesa */
 .menu-toggle {
+  display: none; /* Ocultar en pantallas grandes */
   background-color: transparent;
   border: none;
   cursor: pointer;
   color: #c9d1d9;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  z-index: 1001;
 }
 
 /* Menú de navegación */
 .menu {
-  display: flex; /* Asegura que flexbox esté aplicado */
-  flex-direction: column; /* Alinear verticalmente en móvil */
-  align-items: center; /* Centrar horizontalmente los items */
-  gap: 10px;
+  display: none; /* Ocultar inicialmente */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
   background-color: #0d1117;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
-  margin-top: 10px;
-  list-style: none; /* Quita el estilo de viñetas */
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  list-style: none;
+  gap: 10px;
 }
 
+/* Menú abierto */
 .menu.open {
-  display: flex; /* Mostrar menú cuando esté abierto */
+  display: flex; /* Mostrar el menú */
 }
 
+/* Ítems del Menú */
 .menu li {
   list-style: none;
-  margin: 0;
 }
 
 .menu li a {
@@ -103,104 +117,63 @@ nav {
   transform: scale(1.1);
 }
 
-/* Tema oscuro y claro */
-.theme-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #c9d1d9;
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
+/* Pantallas pequeñas */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block; /* Mostrar el botón hamburguesa */
+  }
 
-/* Centrado de las secciones */
-section {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-#about,
-#certifications,
-#projects,
-#contact {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
+  .menu {
+    display: none; /* Ocultar inicialmente */
+    position: absolute;
+    flex-direction: column;
+    top: -50px;
+    left: 80px;
+    right: -8px;
+    background-color: #964799;
+    border-radius: 5px;
+    padding: 5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    
+    gap: 50px;
+  }
+  #about p{
+    max-width: 300px;
+  }
 }
 
 /* Pantallas grandes */
 @media (min-width: 768px) {
-  nav {
-    flex-direction: row; /* Cambiar a disposición horizontal */
-    justify-content: center;
-    align-items: center;
+  .body{
+    padding: 20px;
   }
-
-  .menu {
-    flex-direction: row; /* Alinear horizontalmente en pantallas grandes */
-    gap: 20px;
-    background-color: transparent;
-    padding: 0;
-    margin-top: 0;
-  }
-
   .menu-toggle {
-    display: none; /* Ocultar botón hamburguesa */
+    display: none; /* Ocultar el botón hamburguesa */
   }
 
-  .header-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .header-content p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Pantallas pequeñas */
-@media (max-width: 767px) {
   .menu {
-    position: absolute;
-    top: 100%; /* Colocar debajo del header */
-    left: 0;
-    right: 0;
-    background-color: #0d1117;
-    border-radius: 0 0 10px 10px;
-    z-index: 1000;
+    display: flex; /* Mostrar siempre en horizontal */
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    background: none;
+    position: static;
+    box-shadow: none;
+    padding: 0;
   }
-
-  .header-content h1 {
-    font-size: 1.5rem;
+  .form-container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 400px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #0d1117; /* Fondo oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    text-align: center; /* Centra el texto */
   }
-
-  .header-content p {
-    font-size: 0.9rem;
-  }
-}
-/* Tema oscuro */
-.dark {
-  background-color: #0d1117;
-  color: #c9d1d9;
 }
 
-.dark header {
-  background: linear-gradient(135deg, #cf1aa2, #6194f3);
-}
-.dark h2{
-  color: #ee8ff7;
-  font-size: 30px;
-}
-
-.dark a {
-  color: #c9d1d9;
-}
-
-.dark a:hover {
-  color: #ee8ff7;
-}
-
-/* Tema claro */
 .light {
   background-color: #ffffff;
   
@@ -210,16 +183,12 @@ section {
   font-size:30px;
 }
 .light p{
-  color: #968888;
+  color: #dbd7d7;
   
 }
+.light #about p{
+  color: #0d1117;
+  background-color: #f3ddf5;
 
-
-
-.light a {
-  color: #333;
 }
 
-.light a:hover {
-  color: #666;
-}

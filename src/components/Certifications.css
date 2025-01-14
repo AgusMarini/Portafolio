@@ -64,3 +64,20 @@
     background-color: #8f1feb;
     transform: scale(1.1); /* Enlarges slightly */
   }
+  /* Tema claro */
+.light .cert-card {
+  background-color: #f3e6f2; /* Color claro */
+  color: #333333;
+}
+
+.light .cert-button {
+  background-color: #f179c3;
+  color: #ffffff;
+}
+
+.light .cert-button:hover {
+  background-color: #8f1feb;
+  color: #161b22;
+}
+
+  
